@@ -73,17 +73,17 @@ Copy-Item .env.example .env
 Install dependencies using Poetry:
 (Make sure Python and Poetry are installed and available in your system PATH)
 
-PowerShell
-pip install poetry
-poetry install
-Run the application:
+PowerShell :
+             pip install poetry
+poetry install :
+                 Run the application:
 
-PowerShell
-poetry run python -m sentinel_net.core
-Alternatively, run via Docker Desktop:
+PowerShell :
+             poetry run python -m sentinel_net.core
+             Alternatively, run via Docker Desktop:
 
-PowerShell
-docker compose up --build
+PowerShell :
+             docker compose up --build
 🐳 Universal Docker Deployment
 If you have Docker Desktop (Windows/macOS) or Docker Engine (Linux) installed, you can skip local environment setup entirely:
 
