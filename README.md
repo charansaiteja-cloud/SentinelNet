@@ -16,43 +16,33 @@ A lightweight, Python-based Network Intrusion Detection System (NIDS) and target
 
 ---
 
-## 📐 Architecture Overview
+## 🌟 Engineering Highlights & Pro Features
 
-```mermaid
-graph TD
-    A[Client / CLI Request] -->|Payload| B(Pydantic Validation Layer)
-    B -->|Validated Target| C{Sentinel Async Engine}
-    C -->|Concurrency Semaphore| D[Worker 1: Port/Target Scan]
-    C -->|Concurrency Semaphore| E[Worker 2: Port/Target Scan]
-    D & E --> F[(Structured Log Pipeline)]
-    F --> G[JSON Output / Results]
-🌟 Engineering Highlights & Pro Features
-⚡ High-Performance Asynchronous Core: Built on native Python asyncio and concurrency throttles to execute high-volume target operations smoothly without blocking resources.
+* **⚡ High-Performance Asynchronous Core:** Built on native Python `asyncio` and concurrency throttles to execute high-volume target operations smoothly without blocking resources.
+* **🔒 Enterprise Input Validation:** Leverages **Pydantic v2** models and strict type enforcement (`Mypy`) to ensure data integrity and prevent injection faults.
+* **🐳 Production Containerization:** Features an optimized multi-stage `Dockerfile` and non-root user security configurations designed for minimal footprint and secure deployments.
+* **🤖 Automated CI/CD Pipeline:** Fully integrated GitHub Actions workflows that automatically execute static analysis (`Ruff`), strict type-checking, and test suites (`Pytest`) on every pull request.
+* **📊 Structured JSON Logging:** Replaced standard console prints with enterprise-ready structured loggers for clean tracking across production environments.
 
-🔒 Enterprise Input Validation: Leverages Pydantic v2 models and strict type enforcement (Mypy) to ensure data integrity and prevent injection faults.
+---
 
-🐳 Production Containerization: Features an optimized multi-stage Dockerfile and non-root user security configurations designed for minimal footprint and secure deployments.
+## 💻 Installation & Usage Guide
 
-🤖 Automated CI/CD Pipeline: Fully integrated GitHub Actions workflows that automatically execute static analysis (Ruff), strict type-checking, and test suites (Pytest) on every pull request.
-
-📊 Structured JSON Logging: Replaced standard console prints with enterprise-ready structured loggers for clean tracking across production environments.
-
-💻 Installation & Usage Guide
 This project supports cross-platform execution across Linux, macOS, and Windows.
 
-Prerequisites
-Python 3.10 or higher
+### Prerequisites
+* **Python 3.10 or higher**
+* **Poetry** (for Python dependency management)
+* **Docker & Docker Compose** (optional, for fully containerized execution)
 
-Poetry (for Python dependency management)
+---
 
-Docker & Docker Compose (optional, for fully containerized execution)
+### 🐧 For Linux & macOS
 
-🐧 For Linux & macOS
-Clone the repository and enter the directory:
-
-Bash
-git clone [https://github.com/charansaiteja-cloud/SentinelNet.git](https://github.com/charansaiteja-cloud/SentinelNet.git)
-cd SentinelNet
+1. **Clone the repository and enter the directory:**
+   ```bash
+   git clone [https://github.com/charansaiteja-cloud/SentinelNet.git](https://github.com/charansaiteja-cloud/SentinelNet.git)
+   cd SentinelNet
 Set up your environment variables:
 
 Bash
