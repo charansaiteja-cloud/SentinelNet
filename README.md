@@ -1,4 +1,3 @@
-Markdown
 # SentinelNet 🛡️
 
 A lightweight, Python-based Network Intrusion Detection System (NIDS) and target inspection framework.
