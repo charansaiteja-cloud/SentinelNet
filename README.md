@@ -16,7 +16,6 @@ A lightweight, Python-based Network Intrusion Detection System (NIDS) and target
 
 ---
 
-## 🌟 Engineering Highlights & Pro Features
 
 * **⚡ High-Performance Asynchronous Core:** Built on native Python `asyncio` and concurrency throttles to execute high-volume target operations smoothly without blocking resources.
 * **🔒 Enterprise Input Validation:** Leverages **Pydantic v2** models and strict type enforcement (`Mypy`) to ensure data integrity and prevent injection faults.
