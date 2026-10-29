@@ -1,0 +1,20 @@
+services:
+  sentinelnet:
+    build: .
+    image: sentinelnet:1.0.0
+    # Host networking is required for live capture on Linux. For PCAP replay
+    # you can remove both network_mode and cap_add.
+    network_mode: host
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    volumes:
+      - ./captures:/data:ro
+      - ./alerts:/alerts
+    command:
+      - "--pcap"
+      - "/data/capture.pcap"
+      - "--baseline"
+      - "200"
+      - "--alerts"
+      - "/alerts/alerts.jsonl"
